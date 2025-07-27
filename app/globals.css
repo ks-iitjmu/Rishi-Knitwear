@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+body {
+  background-color: #e1dedb;
+  background-image: url(/background.svg);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-blend-mode: darken;
+  font-family: var(--font-montserrat), sans-serif;
+  scroll-behavior: smooth;
+}
+
+.title {
+  font-family: var(--font-montserrat);
+  letter-spacing: 10px;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 50s linear infinite;
+}
+
+.footerbg {
+  background-color: #000000b8;
+  background-blend-mode: darken;
+}
