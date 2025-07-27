@@ -51,7 +51,7 @@ const Page: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<number>(0);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white to-amber-50/30">
       <Header />
 
       <main className="flex-grow">

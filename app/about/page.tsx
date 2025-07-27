@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 
 const Page = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-gradient-to-b from-white to-amber-50/30">
       <Header />
       <section className="px-4 sm:px-6 lg:px-20">
         {/* Founder & Partner Message */}

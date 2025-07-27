@@ -16,7 +16,7 @@ const categories = [
 
 const Page = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-gradient-to-b from-white to-amber-50/30">
       <section id="homes" className="relative">
         <Header />
 
