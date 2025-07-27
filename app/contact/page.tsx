@@ -35,7 +35,7 @@ const ContactPage = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-amber-50/30">
-      <Header />lint
+      <Header />
       
       {/* Decorative elements */}
       <div className="fixed -z-10 top-40 left-10 w-72 h-72 bg-amber-800/5 rounded-full blur-3xl"></div>
