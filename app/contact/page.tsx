@@ -180,7 +180,7 @@ const ContactPage = () => {
                   Message Sent Successfully!
                 </h3>
                 <p className="text-gray-700 mb-8">
-                  Thank you for contacting us. We'll get back to you soon.
+                  Thank you for contacting us. We&apos;ll get back to you soon.
                 </p>
                 <button 
                   onClick={() => setIsSuccess(false)}
