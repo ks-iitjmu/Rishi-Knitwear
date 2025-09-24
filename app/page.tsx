@@ -16,66 +16,129 @@ const categories = [
 
 const Page = () => {
   return (
-    <div className="pt-20 bg-gradient-to-b from-white to-amber-50/30">
-      <section id="homes" className="relative">
+    <div className="bg-gradient-to-b from-white to-amber-50/30">
+      <section id="homes" className="relative min-h-screen flex flex-col">
         <Header />
 
-        {/* Hero Title */}
-        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
-          <div className="px-6 sm:px-10 md:px-20 pt-20 md:pt-40 pb-10 z-10 title text-center md:text-left">
-            <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl uppercase tracking-widest">
-              Get
-            </h1>
-            <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl uppercase tracking-widest">
-              Yourself
-            </h1>
-            <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl uppercase text-amber-900 tracking-widest">
-              Into the
-            </h1>
-            <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl uppercase text-amber-900 tracking-widest">
-              Right Gear
-            </h1>
-          </div>
-          <div className="px-6 sm:px-10 md:px-20 pt-10 md:pt-40 pb-10 z-10 title flex justify-center items-center">
-            <Image
-              src="/footer-logo.png"
-              alt="logo"
-              width={300}
-              height={300}
-              className=""
-            />
+        {/* Hero Content Container */}
+        <div className="flex-1 flex items-center justify-center px-6 sm:px-10 md:px-20">
+          <div className="w-full max-w-7xl mx-auto">
+            {/* Hero Title and Cards */}
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 py-10 lg:py-20">
+              <div className="flex-1 text-center lg:text-left max-w-2xl">
+                <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl uppercase tracking-widest leading-tight">
+                  Get
+                </h1>
+                <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl uppercase tracking-widest leading-tight">
+                  Yourself
+                </h1>
+                <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl uppercase text-amber-900 tracking-widest leading-tight">
+                  Into the
+                </h1>
+                <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl uppercase text-amber-900 tracking-widest leading-tight">
+                  Right Gear
+                </h1>
+              </div>
+              
+              <div className="flex-1 flex flex-col items-center justify-center w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl">
+            {/* Hero Cards Stack */}
+            <div className="relative mb-4 sm:mb-6 lg:mb-8 flex items-center justify-center w-full overflow-visible px-2 sm:px-4 lg:px-0">
+              {/* Card 1 - Left */}
+              <div className="relative transform -rotate-6 sm:-rotate-8 lg:-rotate-12 z-10">
+                <div className="w-24 h-36 xs:w-28 xs:h-42 sm:w-36 sm:h-54 md:w-44 md:h-66 lg:w-48 lg:h-72 xl:w-56 xl:h-80 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl lg:shadow-2xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 sm:p-1">
+                  <div className="w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white">
+                    <Image
+                      src="/Sweatshirts1.jpg"
+                      alt="Fashion Collection"
+                      width={240}
+                      height={320}
+                      className="w-full h-full object-cover filter brightness-110"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2 - Center */}
+              <div className="relative z-20 -mx-3 xs:-mx-4 sm:-mx-6 lg:-mx-8">
+                <div className="w-28 h-42 xs:w-32 xs:h-48 sm:w-40 sm:h-60 md:w-48 md:h-72 lg:w-52 lg:h-78 xl:w-60 xl:h-84 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl lg:shadow-2xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 sm:p-1">
+                  <div className="w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white">
+                    <Image
+                      src="/Sweatshirts3.jpg"
+                      alt="Fashion Collection"
+                      width={260}
+                      height={340}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3 - Right */}
+              <div className="relative transform rotate-6 sm:rotate-8 lg:rotate-12 z-10">
+                <div className="w-24 h-36 xs:w-28 xs:h-42 sm:w-36 sm:h-54 md:w-44 md:h-66 lg:w-48 lg:h-72 xl:w-56 xl:h-80 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl lg:shadow-2xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 sm:p-1">
+                  <div className="w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white">
+                    <Image
+                      src="/Sweatshirts2.jpg"
+                      alt="Fashion Collection"
+                      width={240}
+                      height={320}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+                
+                {/* Minimized Logo at bottom */}
+                <div className="flex justify-center items-center mt-3 sm:mt-4 lg:mt-6">
+                  <Image
+                    src="/footer-logo.png"
+                    alt="Rishi Knitwear Logo"
+                    width={100}
+                    height={100}
+                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 opacity-80 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* View Collections Link */}
+            <div className="flex justify-center lg:justify-start pt-4">
+              <Link href="/products" passHref>
+                <div className="flex items-center group cursor-pointer">
+                  <h1 className="uppercase pr-1 font-medium tracking-wider text-sm sm:text-base">
+                    View Our Collections
+                  </h1>
+                  <Image
+                    src="/arrow.svg"
+                    alt="arrow"
+                    width={16}
+                    height={16}
+                    className="w-4 transform transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
 
-        {/* View Collections Link */}
-        <Link href="/products" passHref>
-          <div className="flex items-center group cursor-pointer pl-6 sm:pl-10 md:pl-20 pt-4">
-            <h1 className="uppercase pr-1 font-medium tracking-wider text-sm sm:text-base">
-              View Our Collections
-            </h1>
-            <Image
-              src="/arrow.svg"
-              alt="arrow"
-              width={16}
-              height={16}
-              className="w-4 transform transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-            />
-          </div>
-        </Link>
-
         {/* Scroll Down Link */}
-        <a href="#categories">
-          <div className="pt-20 pb-12 flex flex-col justify-center items-center">
-            <p className="uppercase text-sm tracking-wider mb-2">Scroll Down</p>
-            <Image
-              src="/arrowdown.svg"
-              alt="scroll down arrow"
-              width={24}
-              height={24}
-              className="w-6 animate-bounce"
-            />
-          </div>
-        </a>
+        <div className="flex justify-center pb-8">
+          <a href="#categories">
+            <div className="flex flex-col justify-center items-center group cursor-pointer">
+              <p className="uppercase text-sm tracking-wider mb-2 text-gray-600 group-hover:text-amber-900 transition-colors duration-300">
+                Scroll Down
+              </p>
+              <Image
+                src="/arrowdown.svg"
+                alt="scroll down arrow"
+                width={24}
+                height={24}
+                className="w-6 animate-bounce group-hover:text-amber-900"
+              />
+            </div>
+          </a>
+        </div>
       </section>
 
       {/* Category Section */}
