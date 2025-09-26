@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { motion } from "framer-motion";
 
 const ContactPage = () => {
   const [isSuccess, setIsSuccess] = useState(false);
@@ -42,26 +41,23 @@ const ContactPage = () => {
       <div className="fixed -z-10 bottom-40 right-10 w-80 h-80 bg-amber-800/5 rounded-full blur-3xl"></div>
 
       <main className="flex-grow px-6 py-16 md:px-16 max-w-7xl mx-auto w-full flex flex-col justify-center items-center relative">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <h1
           className="text-4xl md:text-5xl font-bold text-center mb-16"
         >
           Get in <span className="text-amber-800 relative">
             Touch
             <span className="absolute -bottom-2 left-0 w-full h-1 bg-amber-800/30 rounded-full"></span>
           </span> With Us
-        </motion.h1>
+        </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full">
           {/* Contact Info */}
-          <motion.section
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.2, delay: 0.1 }}
-            className="space-y-10"
+          <section
+            className="bg-white shadow-2xl rounded-3xl p-10 space-y-6 relative overflow-hidden flex flex-col justify-center"
           >
+            <div className="absolute -right-20 -top-20 w-40 h-40 bg-amber-800/5 rounded-full"></div>
+            <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-amber-800/5 rounded-full"></div>
+
             <div>
               <h2 className="text-2xl font-semibold text-black mb-3">
                 Contact Information
@@ -100,25 +96,22 @@ const ContactPage = () => {
                   alt: "Location icon"
                 }
               ].map((item, index) => (
-                <motion.li
+                <li
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                 >
                   {item.href ? (
                     <a
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-5 group"
+                      className="flex items-center gap-5 group hover:bg-amber-50 p-3 rounded-xl transition-all duration-300"
                     >
-                      <div className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center group-hover:bg-amber-800/10 transition-all duration-300">
+                      <div className="w-14 h-14 rounded-full bg-amber-800/10 flex items-center justify-center group-hover:bg-amber-800/20 transition-all duration-300">
                         <Image
                           src={item.icon}
                           alt={item.alt}
-                          width={24}
-                          height={24}
+                          width={28}
+                          height={28}
                           className="object-contain"
                         />
                       </div>
@@ -127,48 +120,30 @@ const ContactPage = () => {
                       </span>
                     </a>
                   ) : (
-                    <div className="flex items-center gap-5">
-                      <div className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center">
+                    <div className="flex items-center gap-5 p-3">
+                      <div className="w-14 h-14 rounded-full bg-amber-800/10 flex items-center justify-center">
                         <Image
                           src={item.icon}
                           alt={item.alt}
-                          width={24}
-                          height={24}
+                          width={28}
+                          height={28}
                           className="object-contain"
                         />
                       </div>
                       <span className="text-lg text-gray-800">{item.text}</span>
                     </div>
                   )}
-                </motion.li>
+                </li>
               ))}
             </ul>
-
-            <div className="pt-5">
-              <div className="h-48 w-full rounded-xl overflow-hidden shadow-lg">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.4975463142523!2d75.84967301544574!3d30.8826811917059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a822f35269b11%3A0xfcb7d7766d7f66ee!2sOld%20Madhopuri%2C%20Ludhiana%2C%20Punjab%20141008!5e0!3m2!1sen!2sin!4v1655302132369!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-          </motion.section>
+          </section>
 
           {/* Contact Form */}
-          <motion.section
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+          <section
+            className="flex flex-col justify-center"
           >
             {isSuccess ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+              <div
                 className="bg-white shadow-2xl rounded-3xl p-12 text-center h-full flex flex-col items-center justify-center"
               >
                 <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-6">
@@ -184,11 +159,11 @@ const ContactPage = () => {
                 </p>
                 <button
                   onClick={() => setIsSuccess(false)}
-                  className="px-6 py-3 bg-black text-white rounded-lg hover:bg-amber-800 transition duration-300"
+                  className="px-6 py-4 bg-black text-white rounded-xl hover:bg-amber-800 transition duration-300"
                 >
                   Send Another Message
                 </button>
-              </motion.div>
+              </div>
             ) : (
               <form
                 onSubmit={handleSubmit}
@@ -198,6 +173,13 @@ const ContactPage = () => {
               >
                 <div className="absolute -right-20 -top-20 w-40 h-40 bg-amber-800/5 rounded-full"></div>
                 <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-amber-800/5 rounded-full"></div>
+
+                <div>
+                  <h2 className="text-2xl font-semibold text-black mb-3">
+                    Send us a Message
+                  </h2>
+                  <div className="w-20 h-1 bg-amber-800/70 rounded-full"></div>
+                </div>
 
                 <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
                 <input type="hidden" name="redirect" value="false" />
@@ -276,11 +258,9 @@ const ContactPage = () => {
                   </div>
                 </div>
 
-                <motion.button
+                <button
                   type="submit"
                   disabled={isLoading}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
                   className="w-full bg-black text-white px-6 py-4 rounded-xl hover:bg-amber-800 transition duration-300 flex items-center justify-center gap-2 shadow-lg"
                 >
                   {isLoading ? (
@@ -315,11 +295,31 @@ const ContactPage = () => {
                       </svg>
                     </>
                   )}
-                </motion.button>
+                </button>
               </form>
             )}
-          </motion.section>
+          </section>
         </div>
+
+        {/* Map Section */}
+        <section className="w-full mt-16">
+          <div className="bg-white shadow-2xl rounded-3xl p-6 overflow-hidden">
+            <h2 className="text-2xl font-semibold text-black mb-4 text-center">
+              Find Us Here
+            </h2>
+            <div className="w-20 h-1 bg-amber-800/70 rounded-full mx-auto mb-6"></div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6845.568657730699!2d75.862506!3d30.920652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a8371849b2959%3A0xb72afbb0816d8c4f!2sRishi%20Knitwears(KKPLUS)!5e0!3m2!1sen!2sin!4v1758898761703!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-2xl w-full"
+            ></iframe>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
