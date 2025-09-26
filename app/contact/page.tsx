@@ -25,7 +25,7 @@ const ContactPage = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsLoading(false);
@@ -36,13 +36,13 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-amber-50/30">
       <Header />
-      
+
       {/* Decorative elements */}
       <div className="fixed -z-10 top-40 left-10 w-72 h-72 bg-amber-800/5 rounded-full blur-3xl"></div>
       <div className="fixed -z-10 bottom-40 right-10 w-80 h-80 bg-amber-800/5 rounded-full blur-3xl"></div>
-      
+
       <main className="flex-grow px-6 py-16 md:px-16 max-w-7xl mx-auto w-full flex flex-col justify-center items-center relative">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -53,10 +53,10 @@ const ContactPage = () => {
             <span className="absolute -bottom-2 left-0 w-full h-1 bg-amber-800/30 rounded-full"></span>
           </span> With Us
         </motion.h1>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
           {/* Contact Info */}
-          <motion.section 
+          <motion.section
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.2, delay: 0.1 }}
@@ -68,7 +68,7 @@ const ContactPage = () => {
               </h2>
               <div className="w-20 h-1 bg-amber-800/70 rounded-full"></div>
             </div>
-            
+
             <p className="text-lg text-gray-700">
               We&apos;d love to hear from you. Whether you have a question,
               feedback, or a custom request—reach out!
@@ -146,13 +146,13 @@ const ContactPage = () => {
 
             <div className="pt-5">
               <div className="h-48 w-full rounded-xl overflow-hidden shadow-lg">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.4975463142523!2d75.84967301544574!3d30.8826811917059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a822f35269b11%3A0xfcb7d7766d7f66ee!2sOld%20Madhopuri%2C%20Ludhiana%2C%20Punjab%20141008!5e0!3m2!1sen!2sin!4v1655302132369!5m2!1sen!2sin" 
-                  width="100%" 
-                  height="100%" 
-                  style={{border: 0}} 
-                  allowFullScreen 
-                  loading="lazy" 
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.4975463142523!2d75.84967301544574!3d30.8826811917059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a822f35269b11%3A0xfcb7d7766d7f66ee!2sOld%20Madhopuri%2C%20Ludhiana%2C%20Punjab%20141008!5e0!3m2!1sen!2sin!4v1655302132369!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
@@ -166,14 +166,14 @@ const ContactPage = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             {isSuccess ? (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="bg-white shadow-2xl rounded-3xl p-12 text-center h-full flex flex-col items-center justify-center"
               >
                 <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-6">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 13L9 17L19 7" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M5 13L9 17L19 7" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 <h3 className="text-2xl font-semibold text-green-600 mb-3">
@@ -182,7 +182,7 @@ const ContactPage = () => {
                 <p className="text-gray-700 mb-8">
                   Thank you for contacting us. We&apos;ll get back to you soon.
                 </p>
-                <button 
+                <button
                   onClick={() => setIsSuccess(false)}
                   className="px-6 py-3 bg-black text-white rounded-lg hover:bg-amber-800 transition duration-300"
                 >
@@ -198,7 +198,7 @@ const ContactPage = () => {
               >
                 <div className="absolute -right-20 -top-20 w-40 h-40 bg-amber-800/5 rounded-full"></div>
                 <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-amber-800/5 rounded-full"></div>
-                
+
                 <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
                 <input type="hidden" name="redirect" value="false" />
 
@@ -220,8 +220,8 @@ const ContactPage = () => {
                     />
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                   </div>
@@ -245,8 +245,8 @@ const ContactPage = () => {
                     />
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M22 6L12 13L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M22 6L12 13L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                   </div>
@@ -270,7 +270,7 @@ const ContactPage = () => {
                     />
                     <div className="absolute left-4 top-6 text-gray-400">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 11.5C21 16.75 12 22 12 22C12 22 3 16.75 3 11.5C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 11.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M21 11.5C21 16.75 12 22 12 22C12 22 3 16.75 3 11.5C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 11.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                   </div>
@@ -310,8 +310,8 @@ const ContactPage = () => {
                     <>
                       <span>Send Message</span>
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 2L11 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M22 2L11 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </>
                   )}

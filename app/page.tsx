@@ -39,56 +39,56 @@ const Page = () => {
                   Right Gear
                 </h1>
               </div>
-              
+
               <div className="flex-1 flex flex-col items-center justify-center w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl">
-            {/* Hero Cards Stack */}
-            <div className="relative mb-4 sm:mb-6 lg:mb-8 flex items-center justify-center w-full overflow-visible px-2 sm:px-4 lg:px-0">
-              {/* Card 1 - Left */}
-              <div className="relative transform -rotate-6 sm:-rotate-8 lg:-rotate-12 z-10">
-                <div className="w-24 h-36 xs:w-28 xs:h-42 sm:w-36 sm:h-54 md:w-44 md:h-66 lg:w-48 lg:h-72 xl:w-56 xl:h-80 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl lg:shadow-2xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 sm:p-1">
-                  <div className="w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white">
-                    <Image
-                      src="/Sweatshirts1.jpg"
-                      alt="Fashion Collection"
-                      width={240}
-                      height={320}
-                      className="w-full h-full object-cover filter brightness-110"
-                    />
+                {/* Hero Cards Stack */}
+                <div className="relative mb-4 sm:mb-6 lg:mb-8 flex items-center justify-center w-full overflow-visible px-2 sm:px-4 lg:px-0">
+                  {/* Card 1 - Left */}
+                  <div className="relative transform -rotate-6 sm:-rotate-8 lg:-rotate-12 z-10">
+                    <div className="w-24 h-36 xs:w-28 xs:h-42 sm:w-36 sm:h-54 md:w-44 md:h-66 lg:w-48 lg:h-72 xl:w-56 xl:h-80 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl lg:shadow-2xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 sm:p-1">
+                      <div className="w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white">
+                        <Image
+                          src="/Sweatshirts1.jpg"
+                          alt="Fashion Collection"
+                          width={240}
+                          height={320}
+                          className="w-full h-full object-cover filter brightness-110"
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Card 2 - Center */}
-              <div className="relative z-20 -mx-3 xs:-mx-4 sm:-mx-6 lg:-mx-8">
-                <div className="w-28 h-42 xs:w-32 xs:h-48 sm:w-40 sm:h-60 md:w-48 md:h-72 lg:w-52 lg:h-78 xl:w-60 xl:h-84 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl lg:shadow-2xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 sm:p-1">
-                  <div className="w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white">
-                    <Image
-                      src="/Sweatshirts3.jpg"
-                      alt="Fashion Collection"
-                      width={260}
-                      height={340}
-                      className="w-full h-full object-cover"
-                    />
+                  {/* Card 2 - Center */}
+                  <div className="relative z-20 -mx-3 xs:-mx-4 sm:-mx-6 lg:-mx-8">
+                    <div className="w-28 h-42 xs:w-32 xs:h-48 sm:w-40 sm:h-60 md:w-48 md:h-72 lg:w-52 lg:h-78 xl:w-60 xl:h-84 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl lg:shadow-2xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 sm:p-1">
+                      <div className="w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white">
+                        <Image
+                          src="/Sweatshirts3.jpg"
+                          alt="Fashion Collection"
+                          width={260}
+                          height={340}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Card 3 - Right */}
-              <div className="relative transform rotate-6 sm:rotate-8 lg:rotate-12 z-10">
-                <div className="w-24 h-36 xs:w-28 xs:h-42 sm:w-36 sm:h-54 md:w-44 md:h-66 lg:w-48 lg:h-72 xl:w-56 xl:h-80 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl lg:shadow-2xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 sm:p-1">
-                  <div className="w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white">
-                    <Image
-                      src="/Sweatshirts2.jpg"
-                      alt="Fashion Collection"
-                      width={240}
-                      height={320}
-                      className="w-full h-full object-cover"
-                    />
+                  {/* Card 3 - Right */}
+                  <div className="relative transform rotate-6 sm:rotate-8 lg:rotate-12 z-10">
+                    <div className="w-24 h-36 xs:w-28 xs:h-42 sm:w-36 sm:h-54 md:w-44 md:h-66 lg:w-48 lg:h-72 xl:w-56 xl:h-80 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl lg:shadow-2xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 sm:p-1">
+                      <div className="w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white">
+                        <Image
+                          src="/Sweatshirts2.jpg"
+                          alt="Fashion Collection"
+                          width={240}
+                          height={320}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-                
+
                 {/* Minimized Logo at bottom */}
                 <div className="flex justify-center items-center mt-3 sm:mt-4 lg:mt-6">
                   <Image

@@ -66,11 +66,10 @@ const Page: React.FC = () => {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(idx)}
-                className={`px-5 py-2 sm:px-6 rounded-full text-base sm:text-lg font-medium border transition duration-200 ${
-                  idx === selectedCategory
+                className={`px-5 py-2 sm:px-6 rounded-full text-base sm:text-lg font-medium border transition duration-200 ${idx === selectedCategory
                     ? "bg-amber-800 text-white border-amber-800"
                     : "bg-white text-gray-800 border-gray-300 hover:bg-gray-100"
-                }`}
+                  }`}
                 aria-pressed={idx === selectedCategory}
               >
                 {cat}

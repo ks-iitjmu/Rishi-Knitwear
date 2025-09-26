@@ -47,7 +47,7 @@ const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -107,9 +107,8 @@ const Header = () => {
 
       {/* Header Nav */}
       <header
-        className={`fixed top-8 left-0 right-0 z-40 h-20 flex items-center justify-between px-6 md:px-10 lg:px-20 backdrop-blur-lg border-t border-stone-200/50 transition-all duration-300 ${
-          isScrolled ? "shadow-lg" : ""
-        } ${isOpen ? "hidden md:flex" : ""}`}
+        className={`fixed top-8 left-0 right-0 z-40 h-20 flex items-center justify-between px-6 md:px-10 lg:px-20 backdrop-blur-lg border-t border-stone-200/50 transition-all duration-300 ${isScrolled ? "shadow-lg" : ""
+          } ${isOpen ? "hidden md:flex" : ""}`}
         style={{ backgroundColor: 'rgba(254, 254, 254, 0.95)' }}
       >
         {/* Logo */}
@@ -129,7 +128,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav - Centered */}
-        <nav 
+        <nav
           className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 rounded-full px-8 py-3 shadow-lg border border-stone-200/50"
           style={{ backgroundColor: 'rgba(254, 254, 254, 0.8)' }}
         >
@@ -137,9 +136,8 @@ const Header = () => {
             <Link
               key={link.href}
               href={link.href}
-              className={`px-6 py-2 text-stone-700 font-medium text-sm hover:text-stone-900 hover:bg-stone-100/50 rounded-full transition-all duration-200 relative ${
-                index !== navLinks.length - 1 ? 'after:content-[""] after:absolute after:right-0 after:top-1/2 after:transform after:-translate-y-1/2 after:w-px after:h-4 after:bg-gradient-to-b after:from-transparent after:via-stone-300 after:to-transparent' : ''
-              }`}
+              className={`px-6 py-2 text-stone-700 font-medium text-sm hover:text-stone-900 hover:bg-stone-100/50 rounded-full transition-all duration-200 relative ${index !== navLinks.length - 1 ? 'after:content-[""] after:absolute after:right-0 after:top-1/2 after:transform after:-translate-y-1/2 after:w-px after:h-4 after:bg-gradient-to-b after:from-transparent after:via-stone-300 after:to-transparent' : ''
+                }`}
             >
               {link.label}
             </Link>
@@ -160,7 +158,7 @@ const Header = () => {
         <button
           onClick={toggleModal}
           className="md:hidden p-2 rounded-lg transition-all duration-200 shadow-md"
-          style={{ 
+          style={{
             backgroundColor: 'rgba(254, 254, 254, 0.8)',
           }}
           onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#fefefe'}
@@ -179,7 +177,7 @@ const Header = () => {
       {/* Mobile Modal */}
       {isOpen && (
         <div className="fixed inset-0 bg-black/80 z-30 md:hidden backdrop-blur-sm">
-          <div 
+          <div
             className="fixed top-0 right-0 w-80 max-w-[85vw] h-full shadow-2xl transform transition-transform duration-300 border-l border-stone-200"
             style={{ backgroundColor: '#fefefe' }}
           >
